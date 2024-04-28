@@ -1,0 +1,77 @@
+<div class="basis-full pt-16">
+  <div
+    class="w-full flex flex-col justify-center items-center bg-green-500 h-[200px] gap-2"
+  >
+    <h1 class="text-white text-5xl">Conduit</h1>
+    <p class="text-white text-lg">
+      A place to share your <strong>Angular</strong> knowledge
+    </p>
+  </div>
+
+  <div class="p-6 pb-0">
+    <div class="flex h-full mb-6 justify-center max-w-screen-xl m-auto gap-10">
+      <div class="basis-full md:basis-4/5 p-2">
+        <div class="text-white mb-6 text-lg">
+          <ul class="flex items-center justify-start gap-9">
+            <li
+              class="hover:text-green-400 hover:border-b-2 hover:border-green-400"
+            >
+              <a href="" class="">Your Feed</a>
+            </li>
+
+            <li
+              class="active hover:text-green-400 hover:border-b-2 hover:border-green-400"
+            >
+              <a href="" class="">Global Feed</a>
+            </li>
+          </ul>
+        </div>
+
+        <app-article-list [limit]="10" [config]="listConfig"></app-article-list>
+      </div>
+      <div class="max-w-[200px] hidden md:block md:basis-1/5">
+        <div class="p-2">
+          <p class="text-white mb-3">Popular Tags</p>
+          <div class="flex flex-wrap text-sm gap-2">
+            <a
+              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
+              href=""
+              >eos</a
+            >
+            <a
+              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
+              href=""
+              >est</a
+            >
+            <a
+              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
+              href=""
+              >enim</a
+            >
+            <a
+              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
+              href=""
+              >ipsum</a
+            >
+
+            <a
+              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
+              href=""
+              >repellat</a
+            >
+            <a
+              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
+              href=""
+              >repellat</a
+            >
+            <a
+              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
+              href=""
+              >exercitationem</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

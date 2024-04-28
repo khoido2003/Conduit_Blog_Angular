@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #1e293b;
+  font-family: "Titillium Web", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 5px; /* Rounded corners */
+  background: #1e293b; /* Background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 5px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155; /* Change color on hover */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 5px; /* Rounded corners */
+}

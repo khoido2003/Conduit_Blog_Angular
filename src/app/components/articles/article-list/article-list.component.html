@@ -1,0 +1,14 @@
+<div class="">
+  <div class="" *ngIf="loading === LoadingState.LOADING">
+    Loading articles...
+  </div>
+
+  <div
+    *ngIf="loading === LoadingState.LOADED"
+    class="flex flex-col gap-7 h-full"
+  >
+    <div *ngFor="let article of results" class="bg-gray-500/20 p-2 rounded-lg">
+      <app-article-preview [article]="article"></app-article-preview>
+    </div>
+  </div>
+</div>
