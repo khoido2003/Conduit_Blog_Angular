@@ -17,6 +17,7 @@ import { FavouriteButtonComponent } from './components/articles/favourite-button
 import {
   HttpClientModule,
   provideHttpClient,
+  withFetch,
   withInterceptors,
 } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -37,7 +38,7 @@ import { apiInterceptor } from './interceptors/api.interceptor';
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, CommonModule],
   providers: [
     provideClientHydration(),
-    provideHttpClient(withInterceptors([apiInterceptor])),
+    provideHttpClient(withFetch(), withInterceptors([apiInterceptor])),
   ],
   bootstrap: [AppComponent],
 })

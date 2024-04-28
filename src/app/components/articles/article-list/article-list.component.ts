@@ -25,6 +25,7 @@ export class ArticleListComponent implements OnInit {
     if (config) {
       this.query = config;
       this.currentPage = 1;
+      this.runQuery();
     }
   }
 

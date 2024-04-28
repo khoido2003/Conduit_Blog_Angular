@@ -20,9 +20,27 @@
             </li>
 
             <li
-              class="active hover:text-green-400 hover:border-b-2 hover:border-green-400"
+              [ngClass]="
+                listConfig.type !== 'feed' && !listConfig.filters.tag
+                  ? 'active'
+                  : ''
+              "
+              class="hover:text-green-400 hover:border-b-2 hover:border-green-400"
             >
-              <a href="" class="">Global Feed</a>
+              <a (click)="setListTo('all')" class="">Global Feed</a>
+            </li>
+
+            <li
+              class="text-green-400"
+              [ngClass]="
+                listConfig.type !== 'feed' && listConfig.filters.tag
+                  ? 'active'
+                  : ''
+              "
+            >
+              <a href="" *ngIf="listConfig.filters.tag"
+                ># {{ listConfig.filters.tag }}</a
+              >
             </li>
           </ul>
         </div>
@@ -34,41 +52,12 @@
           <p class="text-white mb-3">Popular Tags</p>
           <div class="flex flex-wrap text-sm gap-2">
             <a
-              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
-              href=""
-              >eos</a
+              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg cursor-pointer"
+              (click)="setListTo('all', { tag: tag })"
+              *ngFor="let tag of tagsList"
             >
-            <a
-              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
-              href=""
-              >est</a
-            >
-            <a
-              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
-              href=""
-              >enim</a
-            >
-            <a
-              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
-              href=""
-              >ipsum</a
-            >
-
-            <a
-              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
-              href=""
-              >repellat</a
-            >
-            <a
-              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
-              href=""
-              >repellat</a
-            >
-            <a
-              class="flex justify-center items-center text-white bg-gray-700 hover:bg-gray-500 px-2 rounded-lg"
-              href=""
-              >exercitationem</a
-            >
+              {{ tag }}
+            </a>
           </div>
         </div>
       </div>
