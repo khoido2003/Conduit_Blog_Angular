@@ -35,7 +35,6 @@ export class HomeComponent implements OnInit {
 
   setListTo(type: string = '', filters: Object = {}): void {
     this.listConfig = { type: type, filters: filters };
-    console.log('working');
     console.log(this.listConfig);
   }
 }

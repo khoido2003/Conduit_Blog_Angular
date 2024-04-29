@@ -22,6 +22,7 @@ import {
 } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { apiInterceptor } from './interceptors/api.interceptor';
+import { ArticleLoadingComponent } from './components/loading/article-loading/article-loading.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { apiInterceptor } from './interceptors/api.interceptor';
     ArticlePreviewComponent,
     ArticleMetaComponent,
     FavouriteButtonComponent,
+    ArticleLoadingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, CommonModule],
   providers: [
