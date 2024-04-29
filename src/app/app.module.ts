@@ -23,6 +23,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { apiInterceptor } from './interceptors/api.interceptor';
 import { ArticleLoadingComponent } from './components/loading/article-loading/article-loading.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ArticleLoadingComponent } from './components/loading/article-loading/ar
     ArticleMetaComponent,
     FavouriteButtonComponent,
     ArticleLoadingComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, CommonModule],
   providers: [
